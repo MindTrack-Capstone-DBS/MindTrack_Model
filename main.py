@@ -5,6 +5,7 @@ import pickle
 import numpy as np
 import string
 import nltk
+import os
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
@@ -15,12 +16,10 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 tf.config.set_visible_devices([], 'GPU')  # Force CPU usage
 
-nltk.download('punkt_tab')
+# Download required NLTK data
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
-
-
 
 model_path = 'best_model_lstm.keras'
 tokenizer_path = 'tokenizer.pickle'
