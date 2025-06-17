@@ -3,6 +3,8 @@ import nltk
 
 print("--> Memulai proses unduh data NLTK...")
 try:
+    nltk.download('punkt_tab', quiet=False)
+    print("--> Unduhan 'punk_tab' berhasil.")
     nltk.download('punkt', quiet=False)  # quiet=False agar lebih vokal
     print("--> Unduhan 'punkt' berhasil.")
     nltk.download('stopwords', quiet=False)
