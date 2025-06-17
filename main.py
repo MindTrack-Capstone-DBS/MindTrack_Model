@@ -12,13 +12,9 @@ import pandas as pd
 from fastapi.middleware.cors import CORSMiddleware
 import os
 
-# Download hanya saat dijalankan langsung
-def download_nltk_resources():
-    nltk.download('punkt')
-    nltk.download('stopwords')
-    nltk.download('wordnet')
-
-download_nltk_resources()
+# Set path lokal nltk_data
+nltk_data_path = os.path.join(os.path.dirname(__file__), 'nltk_data')
+nltk.data.path.append(nltk_data_path)
 
 # File paths
 model_path = 'best_model_lstm.keras'
