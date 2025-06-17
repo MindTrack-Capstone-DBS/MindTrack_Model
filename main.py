@@ -48,13 +48,6 @@ except Exception as e:
 # FastAPI app
 app = FastAPI()
 
-@app.on_event("startup")
-def download_nltk_resources():
-    import nltk
-    nltk.download('punkt')
-    nltk.download('stopwords')
-    nltk.download('wordnet')
-
 # Middleware CORS
 app.add_middleware(
     CORSMiddleware,
