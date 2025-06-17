@@ -15,7 +15,6 @@ import os
 # Set path lokal nltk_data
 nltk_data_path = os.path.join(os.path.dirname(__file__), 'nltk_data')
 nltk.data.path.append(nltk_data_path)
-
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
